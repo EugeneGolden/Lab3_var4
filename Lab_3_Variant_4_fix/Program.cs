@@ -10,7 +10,23 @@ namespace Lab_work_3_Var_4
 {
     class Program
     {
-        
+        public Dictionary<float, int> digitsAmountDict(float[] arr, Dictionary<float, int> dict)
+        {
+            var returnDict = new Dictionary<float, int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (!returnDict.ContainsKey(arr[i]))
+                {
+                    returnDict.Add(arr[i], 1);
+                }
+                else
+                {
+                    returnDict[arr[i]]++;
+                }
+            }
+            return returnDict;
+        }
+
         static void Main(string[] args)
         {
             // Даны два неубывающих массива x и y. Найти их пересечение, то есть неубывающий массив z, содержащий их общие элементы,
@@ -26,49 +42,12 @@ namespace Lab_work_3_Var_4
             Dictionary<float, int> firstDict = new Dictionary<float, int>();
             Dictionary<float, int> secondDict = new Dictionary<float, int>();
 
-            //Найдем сколько раз каждая цифра содержится в первом массиве
-            for (int i = 0; i < firstLength; i++)
-            {
-                if (!firstDict.ContainsKey(firstArray[i]))
-                {
-                    firstDict.Add(firstArray[i], 1);
-                }
-                else
-                {
-                    firstDict[firstArray[i]]++;
-                }
-            }
+            Program pr = new Program();
+            firstDict = pr.digitsAmountDict(firstArray, firstDict);
+            secondDict = pr.digitsAmountDict(secondArray, secondDict);
 
-            //Найдем сколько раз каждая цифра содержится во втором массиве
-            for (int i = 0; i < secondLength; i++)
-            {
-                if (!secondDict.ContainsKey(secondArray[i]))
-                {
-                    secondDict.Add(secondArray[i], 1);
-                }
-                else
-                {
-                    secondDict[secondArray[i]]++;
-                }
-            }
-
-
-            //Выведем словарь для просмотра
-            foreach (KeyValuePair<float, int> kvp in firstDict)
-            {
-                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            }
-
-            Console.WriteLine();
-
-            //Выведем словарь для просмотра
-            foreach (KeyValuePair<float, int> kvp in secondDict)
-            {
-                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            }
-
-            Console.ReadKey();
-
+            //Зная количество каждой цифры в обоих массивах, выводим в результирующий массив наименьшее их количество,
+            //и только тех, которые существуют в обоих массивах
             for (int i = 0; i < firstDict.Count; i++)
             {
                 for (int j = 0; j < secondDict.Count; j++)
@@ -95,9 +74,28 @@ namespace Lab_work_3_Var_4
                 }
             }
 
+            Console.WriteLine("Элементы первого массива:");
+            for (int m = 0; m < firstArray.Length; m++)
+            {
+                Console.Write(" " + firstArray[m]);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Элементы второго массива:");
+            for (int m = 0; m < secondArray.Length; m++)
+            {
+                Console.Write(" " + secondArray[m]);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Элементы результирующего массива:");
             for (int m = 0; m < thirdArray.Count; m++)
             {
-                Console.WriteLine("thirdArray is " + thirdArray[m]);
+                Console.Write(" " + thirdArray[m]);
             }
             Console.ReadKey();
         }    
