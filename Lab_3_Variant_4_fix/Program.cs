@@ -56,7 +56,7 @@ namespace Lab_work_3_Var_4
                     var itemSecondDict = secondDict.ElementAt(j);
                     if (itemFirstDict.Key == itemSecondDict.Key)
                     {
-                        if (itemFirstDict.Value <= itemSecondDict.Value)
+                        /*if (itemFirstDict.Value <= itemSecondDict.Value)
                         {
                             for (int k = 0; k < itemFirstDict.Value; k++)
                             {
@@ -69,6 +69,10 @@ namespace Lab_work_3_Var_4
                             {
                                 thirdArray.Add(itemSecondDict.Key);
                             }
+                        }*/
+                        for (int k = 0; k < Math.Min(itemFirstDict.Value, itemSecondDict.Value); k++)
+                        {
+                            thirdArray.Add(itemSecondDict.Key);
                         }
                     }
                 }
