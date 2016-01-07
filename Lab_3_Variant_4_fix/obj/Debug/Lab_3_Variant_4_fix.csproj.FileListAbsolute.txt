@@ -1,0 +1,6 @@
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\bin\Debug\Lab_3_Variant_4_fix.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\bin\Debug\Lab_3_Variant_4_fix.exe
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\bin\Debug\Lab_3_Variant_4_fix.pdb
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\obj\Debug\Lab_3_Variant_4_fix.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\obj\Debug\Lab_3_Variant_4_fix.exe
+c:\users\admin\documents\visual studio 2015\Projects\Lab_3_Variant_4_fix\Lab_3_Variant_4_fix\obj\Debug\Lab_3_Variant_4_fix.pdb
